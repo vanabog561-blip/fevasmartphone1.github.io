@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FeraPhone — магазин телефонов</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header"><div class="container nav">
+  <a class="logo" href="index.html">Fera<span>Phone</span></a>
+  <nav class="nav-links"><a class="active" href="index.html">Телефоны</a><a href="cabinet.html">Избранное</a><a class="cart-link" href="cart.html">🛒 Корзина <span data-cart-count>0</span></a><a id="adminLink" class="hidden" href="admin.html">Админ-панель</a></nav>
+  <div class="nav-actions"><span id="userName" class="user-name"></span><a id="authLink" class="btn btn-outline" href="auth.html">Войти</a><button id="logoutBtn" class="btn btn-dark hidden">Выйти</button></div>
+</div></header>
+<main>
+<section class="hero"><div class="container hero-inner"><div>
+<p class="eyebrow">FeraPhone • Firebase practice</p>
+<h1>Смартфоны,<br><span>которые хочется держать в руках.</span></h1>
+<p class="hero-text">Выбирай смартфон, сравнивай характеристики, добавляй модели в избранное и оформляй покупку.</p>
+<a href="#catalog" class="btn btn-primary">Смотреть каталог</a>
+</div><div class="hero-card"><div class="hero-icon">📱</div><strong>Живой каталог</strong><span>Новые модели из Firestore появляются без перезагрузки.</span></div></div></section>
+<section id="catalog" class="section"><div class="container">
+<div class="section-head"><div><p class="eyebrow">Каталог</p><h2>Смартфоны</h2></div><div id="catalogStatus" class="status"></div></div>
+<div class="filters"><label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Поиск по названию или описанию"></label>
+<select id="categoryFilter"><option value="">Все бренды</option><option value="Apple">Apple</option><option value="Samsung">Samsung</option><option value="Xiaomi">Xiaomi</option><option value="Google">Google</option><option value="OnePlus">OnePlus</option></select>
+<select id="sortSelect"><option value="newest">Сначала новые</option><option value="rating">По рейтингу</option><option value="price">Сначала дешевле</option></select></div>
+<div id="recipesGrid" class="cards-grid"></div>
+<div id="emptyState" class="empty hidden"><div>📱</div><h3>Телефоны не найдены</h3><p>Попробуй изменить поиск или фильтр.</p></div>
+<div class="load-more-wrap"><button id="loadMoreBtn" class="btn btn-outline hidden">Показать ещё</button></div>
+</div></section>
+<section class="section section-muted"><div class="container"><div class="section-head"><div><p class="eyebrow">Real-time</p><h2>Новые поступления</h2></div></div><div id="liveRecipes" class="mini-grid"></div></div></section>
+</main><footer class="footer"><div class="container">FeraPhone • Учебный интернет-магазин на HTML, CSS, JS + Firebase</div></footer>
+<script src="https://www.gstatic.com/firebasejs/12.19.0/firebase-app-compat.js"></script><script src="https://www.gstatic.com/firebasejs/12.19.0/firebase-auth-compat.js"></script><script src="https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore-compat.js"></script><script src="js/firebase.js"></script><script src="js/common.js"></script><script src="js/app.js"></script>
+</body></html>
